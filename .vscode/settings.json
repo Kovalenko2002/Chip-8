@@ -1,0 +1,16 @@
+{
+    "files.associations": {
+        "Station_data_metro": "plaintext",
+        "stdint.h": "c",
+        "array": "c",
+        "string_view": "c",
+        "initializer_list": "c",
+        "utility": "c",
+        "functional": "c",
+        "memory": "c",
+        "test.C": "cpp",
+        "string.h": "c",
+        "cpu.h": "c",
+        "sdl_audio.h": "c"
+    }
+}

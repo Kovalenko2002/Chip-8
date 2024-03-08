@@ -1,0 +1,72 @@
+\hypertarget{structcpu}{}\doxysection{cpu Struct Reference}
+\label{structcpu}\index{cpu@{cpu}}
+
+
+Structure containing the element to simulate the CPU.  
+
+
+
+
+{\ttfamily \#include $<$cpu.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structcpu_af140b9d2a591a82fe3e00fdaa50f9e99}\label{structcpu_af140b9d2a591a82fe3e00fdaa50f9e99}} 
+uint8\+\_\+t {\bfseries ram} \mbox{[}MEMORY\+\_\+\+SIZE\mbox{]}
+\item 
+\mbox{\Hypertarget{structcpu_a808708b73ac8c01dc51eb1575230a14f}\label{structcpu_a808708b73ac8c01dc51eb1575230a14f}} 
+uint8\+\_\+t {\bfseries V} \mbox{[}REGISTER\+\_\+\+NUMBER\mbox{]}
+\item 
+\mbox{\Hypertarget{structcpu_af9872914eb457afa59dcc3b425e9c3dd}\label{structcpu_af9872914eb457afa59dcc3b425e9c3dd}} 
+uint16\+\_\+t {\bfseries I}
+\item 
+\mbox{\Hypertarget{structcpu_a5a128055eb2ec47b74c900b335944144}\label{structcpu_a5a128055eb2ec47b74c900b335944144}} 
+uint16\+\_\+t {\bfseries PC}
+\item 
+\mbox{\Hypertarget{structcpu_a4fd1f5bba146d26ce2876e091643930b}\label{structcpu_a4fd1f5bba146d26ce2876e091643930b}} 
+uint8\+\_\+t {\bfseries delay}
+\item 
+\mbox{\Hypertarget{structcpu_ae8c04ef83879c86aec5047904fb6a3d9}\label{structcpu_ae8c04ef83879c86aec5047904fb6a3d9}} 
+uint8\+\_\+t {\bfseries sound\+\_\+timer}
+\item 
+\mbox{\Hypertarget{structcpu_a5f11f2145eebfe36eabbbdc6539f879a}\label{structcpu_a5f11f2145eebfe36eabbbdc6539f879a}} 
+uint16\+\_\+t {\bfseries stack} \mbox{[}STACK\+\_\+\+SIZE\mbox{]}
+\item 
+\mbox{\Hypertarget{structcpu_a7667b0bb46925b12147ca4d4306bf2ca}\label{structcpu_a7667b0bb46925b12147ca4d4306bf2ca}} 
+uint8\+\_\+t {\bfseries stack\+\_\+pointer}
+\item 
+\mbox{\Hypertarget{structcpu_a03f3e690d101745a7394efc7b88f7f9f}\label{structcpu_a03f3e690d101745a7394efc7b88f7f9f}} 
+uint8\+\_\+t {\bfseries keyboard} \mbox{[}NB\+\_\+\+KEYS\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Structure containing the element to simulate the CPU. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ram} & An array of 1 bytes of size 4069. \\
+\hline
+{\em V} & An array containing the 16 registers of 1 byte size. \\
+\hline
+{\em I} & A 2 bytes value. \\
+\hline
+{\em PC} & A 2 bytes program counter. \\
+\hline
+{\em delay} & A 1 byte delay timer register. \\
+\hline
+{\em sound\+\_\+timer} & A 1 byte sound timer register. \\
+\hline
+{\em stack} & The stack of the CPU, its size is 16. \\
+\hline
+{\em stack\+\_\+pointer} & The pointer of last occupied value in stack. \\
+\hline
+{\em keyboard} & a table indicating if key were pressed. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+source/include/cpu.\+h\end{DoxyCompactItemize}

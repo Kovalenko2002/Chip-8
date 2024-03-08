@@ -1,0 +1,148 @@
+\hypertarget{cpu_8c}{}\doxysection{source/cpu.c File Reference}
+\label{cpu_8c}\index{source/cpu.c@{source/cpu.c}}
+{\ttfamily \#include \char`\"{}include/cpu.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}include/display.\+h\char`\"{}}\newline
+Include dependency graph for cpu.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{cpu_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{cpu_8c_a25a40b6614565f755233080a384c35f1}\label{cpu_8c_a25a40b6614565f755233080a384c35f1}} 
+void \mbox{\hyperlink{cpu_8c_a25a40b6614565f755233080a384c35f1}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em Initialize the CPU used by the emulator. It sets registers, the stack and keyboard state to 0. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{cpu_8c_ab88d987cc23020a004991f2aeb7a20dc}\label{cpu_8c_ab88d987cc23020a004991f2aeb7a20dc}} 
+void \mbox{\hyperlink{cpu_8c_ab88d987cc23020a004991f2aeb7a20dc}{time\+\_\+count}} ()
+\begin{DoxyCompactList}\small\item\em Decount the ST and DT register if they are superior to 0. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{cpu_8c_a407af8c0ecd70de79a9126a79defb471}{get\+\_\+opcode}} ()
+\begin{DoxyCompactList}\small\item\em Load a 2 bytes opcode from memory. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{cpu_8c_ad962f80863eb5c9255df72c9f9d73672}{interpret\+\_\+opcode}} (uint16\+\_\+t opcode)
+\begin{DoxyCompactList}\small\item\em Interpret a 2 bytes opcode and execute it. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{cpu_8c_a224460b5221c2b756605092c55a5ada1}{load\+\_\+digit}} (char $\ast$digit\+\_\+binary)
+\begin{DoxyCompactList}\small\item\em Store the representation of 1, 2,3 ... C, D and F in ram starting at the 0 address. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{cpu_8c_a9ed94f899c6d0ba8df6728815b57cf6d}{load\+\_\+game}} (char $\ast$rom\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Load a game rom to the ram. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{cpu_8c_a984381030fe484b9e4f5b22f2df2ad45}{draw\+\_\+sprite}} (uint8\+\_\+t x, uint8\+\_\+t y, uint8\+\_\+t height)
+\begin{DoxyCompactList}\small\item\em Draws a sprite for the opcode DXYN. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{cpu_8c_ae9569ce24d23b5ccb22a53a54aa189c3}{wait\+\_\+for\+\_\+key}} (Uint8 b)
+\begin{DoxyCompactList}\small\item\em Wait for user input for the opcode Fx0A. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{cpu_8c_a9e343b465bc190a7a48d5b2786e0124a}\label{cpu_8c_a9e343b465bc190a7a48d5b2786e0124a}} 
+\mbox{\hyperlink{structcpu}{cpu}} {\bfseries CPU}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Xavier Monard 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2023-\/06-\/01
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2023 
+\end{DoxyCopyright}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{cpu_8c_a984381030fe484b9e4f5b22f2df2ad45}\label{cpu_8c_a984381030fe484b9e4f5b22f2df2ad45}} 
+\index{cpu.c@{cpu.c}!draw\_sprite@{draw\_sprite}}
+\index{draw\_sprite@{draw\_sprite}!cpu.c@{cpu.c}}
+\doxysubsubsection{\texorpdfstring{draw\_sprite()}{draw\_sprite()}}
+{\footnotesize\ttfamily void draw\+\_\+sprite (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{x,  }\item[{uint8\+\_\+t}]{y,  }\item[{uint8\+\_\+t}]{height }\end{DoxyParamCaption})}
+
+
+
+Draws a sprite for the opcode DXYN. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X-\/coordinate value (0$<$=X$<$64). \\
+\hline
+{\em y} & Y-\/coordinate value (0$<$=X$<$32). \\
+\hline
+{\em height} & Size of the sprite in bytes. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{cpu_8c_a407af8c0ecd70de79a9126a79defb471}\label{cpu_8c_a407af8c0ecd70de79a9126a79defb471}} 
+\index{cpu.c@{cpu.c}!get\_opcode@{get\_opcode}}
+\index{get\_opcode@{get\_opcode}!cpu.c@{cpu.c}}
+\doxysubsubsection{\texorpdfstring{get\_opcode()}{get\_opcode()}}
+{\footnotesize\ttfamily uint16\+\_\+t get\+\_\+opcode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Load a 2 bytes opcode from memory. 
+
+\begin{DoxyReturn}{Returns}
+uint16\+\_\+t A 2 bytes opcode 
+\end{DoxyReturn}
+\mbox{\Hypertarget{cpu_8c_ad962f80863eb5c9255df72c9f9d73672}\label{cpu_8c_ad962f80863eb5c9255df72c9f9d73672}} 
+\index{cpu.c@{cpu.c}!interpret\_opcode@{interpret\_opcode}}
+\index{interpret\_opcode@{interpret\_opcode}!cpu.c@{cpu.c}}
+\doxysubsubsection{\texorpdfstring{interpret\_opcode()}{interpret\_opcode()}}
+{\footnotesize\ttfamily uint8\+\_\+t interpret\+\_\+opcode (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{opcode }\end{DoxyParamCaption})}
+
+
+
+Interpret a 2 bytes opcode and execute it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em opcode} & A 2 bytes opcode. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{cpu_8c_a224460b5221c2b756605092c55a5ada1}\label{cpu_8c_a224460b5221c2b756605092c55a5ada1}} 
+\index{cpu.c@{cpu.c}!load\_digit@{load\_digit}}
+\index{load\_digit@{load\_digit}!cpu.c@{cpu.c}}
+\doxysubsubsection{\texorpdfstring{load\_digit()}{load\_digit()}}
+{\footnotesize\ttfamily void load\+\_\+digit (\begin{DoxyParamCaption}\item[{char $\ast$}]{digit\+\_\+binary }\end{DoxyParamCaption})}
+
+
+
+Store the representation of 1, 2,3 ... C, D and F in ram starting at the 0 address. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em digit\+\_\+binary} & Path to the file conting the sprites. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{cpu_8c_a9ed94f899c6d0ba8df6728815b57cf6d}\label{cpu_8c_a9ed94f899c6d0ba8df6728815b57cf6d}} 
+\index{cpu.c@{cpu.c}!load\_game@{load\_game}}
+\index{load\_game@{load\_game}!cpu.c@{cpu.c}}
+\doxysubsubsection{\texorpdfstring{load\_game()}{load\_game()}}
+{\footnotesize\ttfamily void load\+\_\+game (\begin{DoxyParamCaption}\item[{char $\ast$}]{rom\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Load a game rom to the ram. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rom\+\_\+name} & Path to a binary game file. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{cpu_8c_ae9569ce24d23b5ccb22a53a54aa189c3}\label{cpu_8c_ae9569ce24d23b5ccb22a53a54aa189c3}} 
+\index{cpu.c@{cpu.c}!wait\_for\_key@{wait\_for\_key}}
+\index{wait\_for\_key@{wait\_for\_key}!cpu.c@{cpu.c}}
+\doxysubsubsection{\texorpdfstring{wait\_for\_key()}{wait\_for\_key()}}
+{\footnotesize\ttfamily uint8\+\_\+t wait\+\_\+for\+\_\+key (\begin{DoxyParamCaption}\item[{Uint8}]{b }\end{DoxyParamCaption})}
+
+
+
+Wait for user input for the opcode Fx0A. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & Register value to store the result. (0$<$= b $<$ 16) \\
+\hline
+\end{DoxyParams}

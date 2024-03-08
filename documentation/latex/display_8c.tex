@@ -1,0 +1,62 @@
+\hypertarget{display_8c}{}\doxysection{source/display.c File Reference}
+\label{display_8c}\index{source/display.c@{source/display.c}}
+{\ttfamily \#include \char`\"{}include/display.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+Include dependency graph for display.\+c\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{display_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{display_8c_a8d2ed3ad1a52c00c458852086f401508}\label{display_8c_a8d2ed3ad1a52c00c458852086f401508}} 
+void \mbox{\hyperlink{display_8c_a8d2ed3ad1a52c00c458852086f401508}{initialize\+\_\+screen}} ()
+\begin{DoxyCompactList}\small\item\em Initialize all the pixel of the screen set at black value. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{display_8c_aa187f515441a2d31cd43c896cbc52b69}\label{display_8c_aa187f515441a2d31cd43c896cbc52b69}} 
+void {\bfseries draw\+\_\+pixel} (\mbox{\hyperlink{structpixel}{pixel}} \mbox{\hyperlink{structpixel}{pixel}})
+\item 
+\mbox{\Hypertarget{display_8c_a10da25e92e69613be93d099bb029feb2}\label{display_8c_a10da25e92e69613be93d099bb029feb2}} 
+void {\bfseries update\+\_\+screen} ()
+\item 
+\mbox{\Hypertarget{display_8c_a4953d1edcbbfc7e420c423ded1d5621a}\label{display_8c_a4953d1edcbbfc7e420c423ded1d5621a}} 
+void {\bfseries clear\+\_\+screen} ()
+\item 
+\mbox{\Hypertarget{display_8c_a9795d7628ac996bbbe43f6f9fc03ae4c}\label{display_8c_a9795d7628ac996bbbe43f6f9fc03ae4c}} 
+void {\bfseries initialize\+\_\+sdl} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{display_8c_ac8ddf4d95f5275a3808b668aa6732168}\label{display_8c_ac8ddf4d95f5275a3808b668aa6732168}} 
+\mbox{\hyperlink{structpixel}{pixel}} \mbox{\hyperlink{display_8c_ac8ddf4d95f5275a3808b668aa6732168}{screen}} \mbox{[}SCREEN\+\_\+\+WIDTH\mbox{]}\mbox{[}SCREEN\+\_\+\+HEIGTH\mbox{]}
+\begin{DoxyCompactList}\small\item\em Screen of our emulator. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{display_8c_a731084af99178070ac40747e96c9fbfa}\label{display_8c_a731084af99178070ac40747e96c9fbfa}} 
+SDL\+\_\+\+Texture $\ast$ {\bfseries sdl\+\_\+texture} \mbox{[}2\mbox{]}
+\item 
+\mbox{\Hypertarget{display_8c_a28a3e08e92f5d58f3d18777b6dba7749}\label{display_8c_a28a3e08e92f5d58f3d18777b6dba7749}} 
+SDL\+\_\+\+Window $\ast$ {\bfseries sdl\+\_\+window}
+\item 
+\mbox{\Hypertarget{display_8c_a0f622b826c313387d7df29dc57270c60}\label{display_8c_a0f622b826c313387d7df29dc57270c60}} 
+SDL\+\_\+\+Renderer $\ast$ {\bfseries sdl\+\_\+renderer}
+\item 
+\mbox{\Hypertarget{display_8c_a1d35d6302d621f311c5c2e21ccef21b7}\label{display_8c_a1d35d6302d621f311c5c2e21ccef21b7}} 
+SDL\+\_\+\+Event {\bfseries sdl\+\_\+event}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Xavier Monard 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2023-\/06-\/01
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2023 
+\end{DoxyCopyright}
